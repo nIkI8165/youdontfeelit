@@ -1,0 +1,58 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Почувствуй!</title>
+    <style>
+        div {
+            border: 5px ridge gray;
+            width: max-content;
+            padding: 10px;
+            background: url('Gym.jpg') no-repeat center;
+            border-radius: 20px;
+        }
+        #Max {
+            height: 500px;
+        }
+        #Glen {
+            height: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <div>
+            <img src="Max.png" alt="Max" id="Max">
+            <img src="Glen.png" alt="Glen" id="Glen">
+            <audio id="sound_1" src="_1.mp3" type="audio/mp3"></audio>
+            <audio id="sound_2" src="_2.mp3" type="audio/mp3"></audio>
+        </div>
+        <script>
+            "use strict";
+            Max.addEventListener('click', function() {
+                sound_1.volume = 1;
+                if (sound_1.paused) {
+                    sound_1.play();
+                    sound_2.pause();
+                } else {
+                    sound_1.pause();
+                }
+            });
+            Glen.addEventListener('click', function() {
+                sound_2.volume = 1;
+                if (sound_2.paused) {
+                    sound_2.play();
+                    sound_1.pause();
+                } else {
+                    sound_2.pause();
+                }
+            });
+        </script>
+    </body>
+</body>
+
+</html>
