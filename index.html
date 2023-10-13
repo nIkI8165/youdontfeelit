@@ -37,6 +37,7 @@
                 sound_1.volume = 1;
                 if (sound_1.paused) {
                     sound_1.play();
+                    sound_2.pause();
                 } else {
                     sound_1.pause();
                 }
@@ -45,6 +46,7 @@
                 sound_2.volume = 1;
                 if (sound_2.paused) {
                     sound_2.play();
+                    sound_1.pause();
                 } else {
                     sound_2.pause();
                 }
